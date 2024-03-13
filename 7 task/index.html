@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head> 
+  <body>
+    <div id="container" class="cont">
+      <h1 id="rameId">მოდი ვითამაშოთ ჯეირანი<br> ✊✌️✋🤞🖖</h1>
+      <div id="buttonsCont" class="buttonsCont hidden">
+        <button onclick="makeChoice(0)">✊</button>
+        <button onclick="makeChoice(1)">✌️</button>
+        <button onclick="makeChoice(2)">✋</button>
+        <button onclick="makeChoice(3)">🤞</button>
+        <button onclick="makeChoice(4)">🖖</button>
+      </div>
+      <button id="startGame" onclick="startGame()">თამაშის დაწყება</button>
+    </div>
+    <button id="startAgain" class="startAgain hidden" onclick="playAgain()">თავიდან დაწყება</button>
+    <div id="Tablo">
+      <table>
+        <tr>
+         <th>player</th>
+         <th>computer</th>
+        </tr>
+        <tr id="scores">
+          <td id="playerScore">0</td>
+          <td id="compScore">0</td>
+        </tr>
+      </table>
+    </div>   
+  </body>
+  <script src="./index.js"></script>
+</html>
