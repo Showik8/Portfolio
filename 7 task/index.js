@@ -3,6 +3,10 @@ function togglePlayButtons() {
   const buttonsCont = document.getElementById('buttonsCont');
   buttonsCont.classList.toggle('hidden')
 }
+debugger
+
+let userscore=0;
+let computerScore=0;  
 
 function startGame() {
   const startGameButton = document.getElementById('startGame');
@@ -101,10 +105,6 @@ function addThInTr(scores) {
 }
 
 function calculator(arg){
-  
-  let userscore=0;
-  let computerScore=0;  
-
   if(computerDicision>playerDicision){
   computerScore++
   } else{ 
@@ -113,4 +113,4 @@ function calculator(arg){
   return userscore
 }
 
-calculator(playerDicision,computerDicision)
+
