@@ -7,6 +7,8 @@ debugger
 
 let userscore=0;
 let computerScore=0;  
+let computerwiner=document.getElementById(`compScore`)
+let userwiner=document.getElementById(`playerScore`);
 
 function startGame() {
   const startGameButton = document.getElementById('startGame');
@@ -25,41 +27,41 @@ function getWinner(computerDicision, playerDicision) {
   switch(computerDicision) {
     case 0:
         if (playerDicision == 1 || playerDicision == 3) {
-          computerScore++;
+          compwin()
           return computerWon;
          } 
-         userscore++
+         userwin()
          return playerWon;
         
     case 1:
         if (playerDicision == 2 || playerDicision == 3){
-          computerScore++;
+          compwin()
           return computerWon;
         }     
-          userscore++
+          userwin()
         return playerWon;
      case 2:
       if (playerDicision == 4 || playerDicision == 0) {
-        computerScore++;
+        compwin()
         return computerWon;
         
          }  
-         userscore++
+         userwin()
          return playerWon;  
       case 3:
         if (playerDicision == 4 || playerDicision == 2) {
-          computerScore++;
+          compwin()
           return computerWon;
 
            }  
-           userscore++
+           userwin()
            return playerWon; 
       case 4:
         if (playerDicision == 1 || playerDicision == 0) {
-          computerScore++;
+          compwin()
           return computerWon;
            }  
-           userscore++
+           userwin()
            return playerWon;
         }
 
@@ -113,4 +115,14 @@ function calculator(arg){
   return userscore
 }
 
+
+function compwin(){
+  computerScore++
+  computerwiner.innerText= `Computer wins! ${computerScore}`
+}
+
+function userwin(){
+  userscore++
+  userwiner.innerText=`You win! ${userscore}`
+}
 
