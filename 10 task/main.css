@@ -1,0 +1,273 @@
+
+
+.big-shoulders display-uniquifier {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.outfit-uniquifier {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100svh;
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 180px;
+}
+
+.Content{
+    max-width: 1275px;
+    max-height:800px;
+    display: flex;
+    justify-content: start;
+}
+.Back{
+    width: 990px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: black;
+}
+
+.OldWomen{
+    width: 540px;
+    height: 800px;
+   
+}
+
+.contH2{
+    font-family: Big Shoulders Display;
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 88px;
+    letter-spacing: 0px;
+    text-align: left;
+    position: relative;
+    bottom: 100px;
+    left: 165px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.outfit{
+    top: 190px;
+    left: -60px;
+    font-family: Outfit;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(68, 68, 68, 1);
+
+
+}
+
+.rigth{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+    height:296px;
+    width:350px ;
+    position: relative;
+    top: 190px;
+    right: 65px;
+
+}
+
+.Bttn{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 72px;
+    width: 260px;
+    align-items: center;
+    padding: 24px 0px 24px 32px;
+    cursor: pointer;
+}
+
+.Bttext{
+    font-family: Big Shoulders Display;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 3.6363637447357178px;
+    text-align: left;
+
+}
+
+.Gold{
+    background: rgba(213, 150, 108, 1);
+    width: 56px;
+    height: 72px;
+    color: white;
+    font-size: 24px;
+}
+.Bttext{     
+     font-family: Big Shoulders Display;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 3.6363637447357178px;
+    text-align: center;
+    color: white;
+}
+
+.SecondContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 1110px;
+    max-height: 1150px;
+    background-color: white;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.Rectangle{
+    width: 635px;
+    height: 400px;
+    position: relative;
+    right: 190px;
+}
+
+.SecondRectangle{
+    width: 635px;
+    height: 720px;
+    margin-top: 60px;
+}
+
+.SecondText{
+    width: 350px;
+    height: 280px;
+    margin-top: 60px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+
+}
+
+
+.YourDay{   
+    font-family: Big Shoulders Display;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(21, 21, 21, 1);
+
+
+}
+
+.secondP{
+    font-family: Outfit;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(68, 68, 68, 1);
+
+
+}
+
+.ThirdRectangle{
+    width: 445px;
+    height: 313px;
+}
+
+.SecondBlack{
+    width: 445px;
+    height: 377px;
+    background: rgba(21, 21, 21, 1);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 65px 47px 64px 48px;
+
+}
+
+.SecondH2{
+    color: rgba(255, 255, 255, 1);
+    font-family: Big Shoulders Display;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.Paragraph{
+    font-family: Outfit;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+footer{
+    background-color: black;
+    width: 100vw;
+    height: 250px;
+    padding: 80px 165px;
+
+}
+
+.footerDiv{
+    max-width: 1110px;
+    max-height: 84px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footerIcon{
+    width: 159.57px;
+    height: 58px;
+}
+
+.FooterP{
+    font-family: Outfit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 430px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.SocialMedia{
+    width: 100px;
+    height: 20px;
+    gap: 20px;
+    display: flex;
+}
+
+.fa{
+    width: 20px;
+    height: 20px;
+}
+
+.tw{
+    width: 20px;
+    height: 16.25px;
+}

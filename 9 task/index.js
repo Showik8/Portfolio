@@ -1,4 +1,4 @@
-const resultinput = document.getElementById(`input`)
+const resultinput = document.getElementById(`input`) 
 
 function handleNumPress(num){
     resultinput.value =` ${resultinput.value}${num}`
@@ -10,12 +10,15 @@ function handleEqual(){
     const result=eval(expresion); 
     resultinput.value = result;
     console.log(result)
+
 }
 
 function clearInp(){   
     resultinput.value=""
    
 }
+
+
 
 function togglesign(){
     const firstsign = resultinput.value[0];

@@ -1,0 +1,173 @@
+.big-shoulders display-uniquifier {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+  .outfit-uniquifier {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body{
+    width: 100vw;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+.map{
+    width: auto;
+    max-height: 685px;
+}
+
+.Bttn{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 72px;
+    width: 260px;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 0px;
+    left: 160px;
+    padding: 0px 30px 0px 0px;
+}
+
+.Gold{
+    background: rgba(213, 150, 108, 1);
+    width: 56px;
+    height: 100%;
+    color: white;
+    font-size: 24px;
+}
+
+.Bttext{     
+    font-family: Big Shoulders Display;
+   font-size: 20px;
+   font-weight: 800;
+   line-height: 24px;
+   letter-spacing: 3.6363637447357178px;
+   text-align: center;
+   color: white;
+
+}
+
+.FirstContent{
+    display: flex;
+    width: auto;
+    height: 560px;
+    justify-content: space-between;
+    align-items: start;
+    padding: 104px 165px 100px 165px;
+    background-color: black;
+    gap: 20%;
+}
+
+.Locationtext{
+    font-family: Big Shoulders Display;
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 70px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+}
+
+.RigthText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+h3{
+    font-family: Big Shoulders Display;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(213, 150, 108, 1);
+}
+
+.Adress{
+    color: rgba(255, 255, 255, 1);
+    font-family: Outfit;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.Paragraph{
+    color: rgba(255, 255, 255, 1);
+    font-family: Outfit;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+footer{
+    background: rgba(213, 150, 108, 1);
+    width: 100vw;
+    height: 250px;
+    padding: 80px 165px;
+
+}
+
+.footerDiv{
+    max-width: 1110px;
+    max-height: 84px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footerIcon{
+    width: 159.57px;
+    height: 58px;
+}
+
+.FooterP{
+    font-family: Outfit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 430px;
+    color:rgba(21, 21, 21, 1);
+
+}
+
+.SocialMedia{
+    width: 100px;
+    height: 20px;
+    gap: 20px;
+    display: flex;
+}
+
+.fa{
+    width: 20px;
+    height: 20px;
+}
+
+.tw{
+    width: 20px;
+    height: 16.25px;
+}
