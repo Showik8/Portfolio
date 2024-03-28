@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100svh;
+    background-color: black;
+}
+
+.container {
+    width: 50%;
+    height: 500px;
+    background-color: rgba(38, 126, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.test{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(104, 70, 70);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+button{
+    padding: 18px 12px;
+    background-color: aqua;
+}
+
+p{
+    font-size: 40px;
+    color:white;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: flex;
+}
+
+.secCon{
+    width: 100vw;
+    height: 100svh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    animation-name: animacia;
+    animation-duration: 6s;
+
+        h2{
+            color: white;
+            font-size: 50px;
+        }
+
+        button{
+            padding: 12px 24px;
+            background-color: cadetblue;
+            border-radius: 4px;
+            font-size: 30px;
+            transition: .3s ease all;
+        }
+        
+        input{
+            width: 250px;
+            height: 50px;
+            text-align: center;
+            background-color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 60%;
+            color: black;
+            border: 2px solid  #ced4da;
+            border-radius: 8px;
+        }
+}
+
+
+
+
+
+
+
+@keyframes animacia {
+    from{background-color: white;}
+    to {background-color: rgb(23, 16, 128);}
+  }
