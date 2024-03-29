@@ -5,21 +5,20 @@ const myH2 = document.createElement(`h2`)
 const myButton = document.createElement(`button`)
 const myP = document.createElement(`p`)
 const myInput = document.createElement(`input`)
+myInput.setAttribute("id",`myId`)
 
 function makingContainer(){
     myH2.innerText ="Es sheiqmna JsShi"
-    myButton.innerText="Test Button"
+    myButton.innerText="Okay"
     myButton.addEventListener("click", Testing)
     myP.innerText ="Daakliket"
     myDiv.classList.add(`test`)
     myDiv.appendChild(myH2)
     myDiv.appendChild(myP)
     myDiv.appendChild(myButton)
-
     conainer.appendChild(myDiv)
 
 }
-makingContainer()
 
  
 
@@ -58,3 +57,10 @@ function Testing(){
     
 }
 
+function inputChange(){
+    let inputi = document.getElementById(`myId`);
+    let inputValue = inputi.value;
+    console.log(inputValue)
+}
+
+inputChange()

@@ -31,10 +31,10 @@ body{
 }
 
 .Content{
-    max-width: 1275px;
+    width: 100%;
     max-height:800px;
     display: flex;
-    justify-content: start;
+    align-self: flex-start;
 }
 .Back{
     width: 990px;
@@ -61,7 +61,8 @@ body{
     position: relative;
     bottom: 100px;
     left: 165px;
-    color: rgba(255, 255, 255, 1);
+    mix-blend-mode: difference; 
+    color: white;
 }
 
 .outfit{
@@ -132,7 +133,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    max-width: 1110px;
+    max-width: 100vw;
     max-height: 1150px;
     background-color: white;
     flex-wrap: wrap;
@@ -225,14 +226,16 @@ body{
 
 footer{
     background-color: black;
-    width: 100vw;
+    width: 100%;
     height: 250px;
     padding: 80px 165px;
+    position: relative;
+    bottom: 0%;
 
 }
 
 .footerDiv{
-    max-width: 1110px;
+    max-width: 100%;
     max-height: 84px;
     display: flex;
     justify-content: space-between;
@@ -270,4 +273,66 @@ footer{
 .tw{
     width: 20px;
     height: 16.25px;
+}
+
+.SmallContent{
+    display: none;
+    flex-direction:row;
+    background-color: white;
+    width: 800px;
+    
+
+}
+
+.womenImg{
+        width: 500px;
+        height: 700px;
+}
+.Text{
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    position: relative;
+    right: 50px;
+    top: 50px;
+
+}
+
+.ScontH2{
+    color: black;
+    font-family: Big Shoulders Display;
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 88px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.secondContentSmall{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+
+@media (max-width:800px){
+    body{
+        width: 100vw;
+    }
+    .Content{
+        display: none;
+    }
+    .SmallContent{
+        display: flex;   
+    }
+    .SecondContent{
+        width: 100%;
+    }
+    .Rectangle{
+
+    }
 }
