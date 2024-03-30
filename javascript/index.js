@@ -1,4 +1,3 @@
-
 const conainer = document.getElementById('container')
 const myDiv = document.createElement(`div`)
 const myH2 = document.createElement(`h2`)
@@ -25,7 +24,8 @@ function makingContainer(){
 function makingSecondCont(){
     let secCon = document.createElement(`div`)
     secCon.classList.add(`secCon`)
-   
+    let buttonForInput=document.createElement(`button`);
+    buttonForInput.classList.add("hidden")
     const myButton2=document.createElement(`button`) 
     myH2.innerText = "woow It's Working"
     secCon.appendChild(myH2)
@@ -36,6 +36,7 @@ function makingSecondCont(){
             myH2.classList.add('hidden')
             myButton2.classList.add('hidden')
             myInput.classList.remove('hidden')
+            buttonForInput.classList.remove(`hidden`)
             
             })
         secCon.appendChild(myButton2) 
@@ -43,7 +44,15 @@ function makingSecondCont(){
     myInput.classList.add('hidden')
     myInput.inputMode= `text`
     myInput.placeholder=`Enter Your Name Here`
-    secCon.appendChild(myInput)    
+    secCon.appendChild(myInput)   
+    // let buttonForInput=document.createElement(`button`);
+    buttonForInput.innerText="Submit";
+   
+    buttonForInput.setAttribute("id","submit-btn")
+    buttonForInput.addEventListener("click",()=>{
+       console.log(`Hello ${myInput.value}`);
+    });
+    secCon.appendChild(buttonForInput);
     document.body.appendChild(secCon)
 }
 
@@ -57,10 +66,3 @@ function Testing(){
     
 }
 
-function inputChange(){
-    let inputi = document.getElementById(`myId`);
-    let inputValue = inputi.value;
-    console.log(inputValue)
-}
-
-inputChange()
