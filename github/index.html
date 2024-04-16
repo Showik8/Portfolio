@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css"/>
+</head>
+<body>
+  <div class="headCont"> 
+    <span>devfinder</span>
+    <div class="btn">
+      <span>LIGHT</span>
+      <img src="./assets/002-sun.png" alt="sun">
+    </div>
+    </div>
+    <div class="inputcont">
+      <img src="./assets/Combined Shape.png">
+      <input id="searchInput" placeholder="Search GitHub username…" type="text" />
+      <p id="notFound"></p>
+      <button onclick="search()">Search</button>
+    </div>
+    <div id="backcont" class="backcont"></div>
+  <div id="mainCont" class="cont ">
+    <img id="img" src="./assets/002-sun.png" alt="profilePhoto">
+    <div class="info">
+      <div class="user">
+        <div class="name">
+          <h1 id="username">The Octocat </h1>
+          <p>@octocat </p>
+        </div>
+        <span>Joined 25 Jan 2011</span>
+      </div>
+      <div id="bio"class="bio"></div>
+      <div class="repos">
+        <div>
+          <p>Repos</p>
+            <h2 id="repos">num</h2>
+        </div>
+        <div>
+          <p>Follower</p>
+            <h2 id="follower">num</h2>
+        </div>
+        <div>
+          <p>Following</p>
+            <h2 id="following">num</h2>
+        </div>
+      </div>
+      <div class="adress">
+       <div>
+        <img src="./assets/003-pin.png">
+        <p> sadme</p>
+       </div>
+       <div>
+        <img src="./assets/003-pin.png">
+        <p> sadme</p>
+       </div>
+       <div>
+        <img src="./assets/003-pin.png">
+        <p id="html"> sadme</p>
+       </div>
+       <div>
+        <img src="./assets/003-pin.png">
+        <p> sadme</p>
+       </div>
+      </div>
+    </div>
+  </div> 
+
+   
+  <ul id="list" class="list">
+
+  </ul>
+</body>
+<!-- <script src="./index.js"></script> -->
+<script src="./main.js"></script>
+</html>

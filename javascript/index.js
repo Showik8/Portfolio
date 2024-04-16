@@ -50,7 +50,8 @@ function makingSecondCont(){
    
     buttonForInput.setAttribute("id","submit-btn")
     buttonForInput.addEventListener("click",()=>{
-       console.log(`Hello ${myInput.value}`);
+       console.log(`Hello ${myInput.value}`
+       localStorage.getItem("myInput.value"));
     });
     secCon.appendChild(buttonForInput);
     document.body.appendChild(secCon)
