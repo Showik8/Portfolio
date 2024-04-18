@@ -17,6 +17,7 @@ async function search(valueInput) {
       {
         headers: {
           "Accept": "application/vnd.github+json",
+          "Authorization": "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",
           "X-GitHub-Api-Version": "2022-11-28"
         }
       }
@@ -30,6 +31,7 @@ async function search(valueInput) {
 //       {
 //         headers: {
 //           "Accept": "application/vnd.github+json",
+//           "Authorization": "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",
 //           "X-GitHub-Api-Version": "2022-11-28"
 //         }
 //       }
