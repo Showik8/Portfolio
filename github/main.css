@@ -5,6 +5,7 @@
   font-family: "Space Mono", monospace;
 }
 
+
 body {
   display: flex;
   min-height: 100svh;
@@ -15,13 +16,59 @@ body {
   gap: 30px;
 }
 
+.start{
+  display: flex;
+  min-height: 100svh;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(20, 29, 47, 1);
+  margin-top: 150px;
+}
+
 .backcont{
   width: 50%;
   height: 400px;
   background-color: rgba(30, 42, 71, 1);
   border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+    li{
+      display: flex;
+      color: white;
+      justify-content:space-around;
+      align-items: center;
+      border: 1px solid rgb(12, 12, 110);
+      border-radius: 4px;
+    }
+    ul{
+      width: 60%;
+    }
+
+    img{
+      width: 100px;
+      height: 100px;
+    }
+    
+    button{
+      width: 60px;
+      height: 60px;
+      background-color: green;
+      color:white;
+      border-radius: 50%;
+    }
 }
 
+
+
+.backcontLigth{
+  width: 50%;
+  height: 400px;
+  background-color:white;
+  border-radius: 24px;
+}
 .headCont{
   width: 50%;
   height: 30px;
@@ -46,13 +93,42 @@ body {
      
 }
 
+.headContLight{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: Black;
+      font-family: Space Mono;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 38.51px;
+      text-align: left;
+
+   
+      .btn{
+        width: 100px;
+        height: 30px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      } 
+
+     
+     
+}
+
 .btn{
   font-size: 13px;
   font-weight: 700;
   line-height: 19.25px;
   letter-spacing: 2.5px;
   text-align: right;
+  cursor: pointer;
+    span{
+      margin-top: 10px ;
 
+   }
 }
 
 .inputcont{
@@ -67,7 +143,7 @@ body {
   button{
     width: 106px;
     height: 50px;
-    background: rgba(0, 121, 255, 1);
+    background-color: rgb(56, 117, 187);
     border-radius: 16px;
     font-size: 16px;
     font-weight: 700;
@@ -95,10 +171,74 @@ body {
     }
 }
 
+.inputcontLigth{
+  display: flex;
+  width: 50%;
+  height: 70px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+
+  button{
+    width: 106px;
+    height: 50px;
+    background-color: rgb(56, 117, 187);
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23.7px;
+    color: white;
+  }
+    input{
+    width: 40%;
+    fill: none;
+    background: transparent;
+    border: none;  
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: white;
+  }
+
+  p{
+    color: red;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.22px;
+    text-align: left;
+
+    }
+}
+
+.hidden{
+  display: none;
+}
+
 .cont {
+  display: flex;
   width: 50%;
   height: 400px;
   background-color: rgba(30, 42, 71, 1);
+  border-radius: 24px;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 48px 48px;
+
+  img{
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+
+  }
+}
+
+
+
+.ContLigth{
+  width: 50%;
+  height: 400px;
+  background-color:white;
   border-radius: 24px;
   display: flex;
   display: none;
@@ -111,6 +251,7 @@ body {
     height: 117px;
 
   }
+
 }
 
 .info{
@@ -155,6 +296,7 @@ body {
   width: 100%;
   height: 30px;
   margin-top: 20px;
+  color:white;
 }
 
 .repos{
@@ -182,6 +324,7 @@ body {
   height: 30%;
 
   p{
+    color: white;
     max-width: 20%;
   }
 
@@ -197,4 +340,13 @@ body {
       width: 15px;
       height: 15px;
     }
+}
+
+.light{
+  background-color: #F6F8FF;
+  color:  rgba(34, 39, 49, 1);
+}
+
+@media (max-width:800px){
+
 }

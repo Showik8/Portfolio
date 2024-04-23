@@ -9,30 +9,35 @@
   <title>Document</title>
   <link rel="stylesheet" href="./main.css"/>
 </head>
-<body>
-  <div class="headCont"> 
+<body class="start" >
+  <div id="darkMode" class="headCont"> 
     <span>devfinder</span>
-    <div class="btn">
-      <span>LIGHT</span>
-      <img src="./assets/002-sun.png" alt="sun">
+    <div  id="btn" class="btn">
+      <span id="darkText">LIGHT</span>
+      <img id="icon" src="./assets/sun.png" alt="sun">
     </div>
     </div>
-    <div class="inputcont">
+    <div id="inputcont" class="inputcont">
       <img src="./assets/Combined Shape.png">
       <input id="searchInput" placeholder="Search GitHub username…" type="text" />
       <p id="notFound"></p>
       <button onclick="search()">Search</button>
     </div>
-    <div id="backcont" class="backcont"></div>
-  <div id="mainCont" class="cont ">
-    <img id="img" src="./assets/002-sun.png" alt="profilePhoto">
+    <div id="backcont" class="backcont">
+      <ul id="list" class="list">
+        <li> <img src="./assets/ava3.webp" alt=""><h1> shota abashidze</h1>  <button onclick="liButton()"> click</button></li>  
+       
+      </ul>
+    </div>
+  <div id="mainCont" class=" hidden ">
+    <img id="img" src="./assets/sun.png" alt="profilePhoto">
     <div class="info">
       <div class="user">
         <div class="name">
           <h1 id="username">The Octocat </h1>
-          <p>@octocat </p>
+          <p id="login">@octocat </p>
         </div>
-        <span>Joined 25 Jan 2011</span>
+        <span id="createTime">Joined 25 Jan 2011</span>
       </div>
       <div id="bio"class="bio"></div>
       <div class="repos">
@@ -52,28 +57,23 @@
       <div class="adress">
        <div>
         <img src="./assets/003-pin.png">
-        <p> sadme</p>
+        <p id="location"> </p>
        </div>
        <div>
-        <img src="./assets/003-pin.png">
-        <p> sadme</p>
+        <img src="./assets/twt.png">
+        <p id="twt"> </p>
        </div>
        <div>
-        <img src="./assets/003-pin.png">
-        <p id="html"> sadme</p>
+        <img src="assets/002-url.png">
+        <p id="html"> </p>
        </div>
        <div>
-        <img src="./assets/003-pin.png">
-        <p> sadme</p>
+        <img src="./assets/001-office-building.png">
+        <p id="office"> </p>
        </div>
       </div>
     </div>
   </div> 
-
-   
-  <ul id="list" class="list">
-
-  </ul>
 </body>
 <!-- <script src="./index.js"></script> -->
 <script src="./main.js"></script>
