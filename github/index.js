@@ -16,22 +16,22 @@ const twt = document.getElementById('twt')
 const bio = document.getElementById(`bio`) 
 
 
-function smallSearch(arg){
-  for (let i=0; result.items[i]; i++){
-    if(i<5){
-     h1.innerText=result.items[i].login
-     // profilePhoto.src=result[i].avatar_url
-       // li.appendChild(profilePhoto)
-       li.appendChild(h1)
-       li.appendChild(button)
-       ulList.appendChild(li)
-        }
-      if(i==5){
-       break
-     }
-   }
+// function smallSearch(arg){
+//   for (let i=0; result.items[i]; i++){
+//     if(i<5){
+//     //  h1.innerText=result.items[i].login
+//     //  profilePhoto.src=result[i].avatar_url
+//        li.appendChild(profilePhoto)
+//        li.appendChild(h1)
+//        li.appendChild(button)
+//        ulList.appendChild(li)
+//         }
+//       if(i==5){
+//        break
+//      }
+//    }
 
-}
+// }
 
 
 
@@ -62,19 +62,6 @@ async function search(){
   const ulList = document.getElementById(`list`)   
   button.innerText= `View Profile`
   
-  // for (let i=0; result.items[i]; i++){
-  //   if(i<5){
-  //    h1.innerText=result.items[i].login
-  //   //  profilePhoto.src=result[i].avatar_url
-  //     //  li.appendChild(profilePhoto)
-  //      li[i].appendChild(h1)
-  //      li[i].appendChild(button)
-  //      ulList.appendChild(li[i])
-  //       }
-  //     if(i==5){
-  //      break
-  //    }
-  //  }
 
     result.items.forEach(function(element){
         console.log(element)

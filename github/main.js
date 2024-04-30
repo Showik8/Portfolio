@@ -10,28 +10,17 @@ const following = document.getElementById(`following`)
 const html = document.getElementById(`html`)
 const maincont = document.getElementById(`mainCont`)
 const createTime = document.getElementById(`createTime`)
-const userlocation = document.getElementById(`userlocation`)
+const userlocation = document.getElementById(`location`)
 const office = document.getElementById(`office`)
 const twt = document.getElementById('twt')
 const bio = document.getElementById(`bio`) 
+const reposDiv = document.getElementById(`reposCont`)
+const user= document.getElementById(`user`)
+const adress = document.getElementById(`adress`)
+let userid = 0
+let btnid = 0
 const searchInput = document.getElementById(`searchInput`)
-
-function smallSearch(arg){
-  for (let i=0; result.items[i]; i++){
-    if(i<5){
-     h1.innerText=result.items[i].login
-     profilePhoto.src=result[i].avatar_url
-       li.appendChild(profilePhoto)
-       li.appendChild(h1)
-       li.appendChild(button)
-       ulList.appendChild(li)
-        }
-      if(i==5){
-       break
-     }
-   }
-
-}
+searchInput.focus()
 
 
 
@@ -54,30 +43,13 @@ async function search(){
   let searchInput = document.getElementById('searchInput').value;
   document.body.classList.remove(`start`)
   const result= await fetchdata(searchInput)
-  console.log(result.total_count)
-  const li = document.createElement(`li`)
-  const h1 = document.createElement(`h1`) 
-  const profilePhoto = document.createElement(`img`)
-  const button = document.createElement(`button`)
-  const ulList = document.getElementById(`list`)   
-  button.innerText= `click`
-  button.addEventListener(`click`, liButton)
-  
-  for (let i=0; result.items[i]; i++){
-    if(i<=5){
+ 
+  const ulList = document.getElementById(`list`) 
 
-      console.log(`is ${i}`)
-     h1.innerText=result.items[i].login
-     profilePhoto.src=result.items[i].avatar_url
-       li.appendChild(profilePhoto)
-       li.appendChild(h1)
-       li.appendChild(button)
-       ulList.appendChild(li)
-        }
-     if(i==6){
-      break
-     }
-   }
+
+  if(result.total_count>=5){
+    ulList.style.overflowY= `scroll`
+  }
 
    if(result.total_count==0){
     notFound.innerText=`not founded`
@@ -85,21 +57,29 @@ async function search(){
    }
 
 
-    result.items.forEach(function(element){
+   
+       result.items.forEach(function(element){
         console.log(element)
-      
-      h1.innerText=element.login
-        h1.setAttribute(`id`, `useruser`)
-      profilePhoto.src=element.avatar_url
-      li.appendChild(profilePhoto)
-      li.appendChild(h1)
-      li.appendChild(button)
-      ulList.appendChild(li)
-      
-    });
-  
-}
+        const li = document.createElement(`li`)
+        const h1 = document.createElement(`h1`) 
+        const profilePhoto = document.createElement(`img`)
+        const button = document.createElement(`button`)
+        button.innerText= `click`
+        button.addEventListener(`click`, liButton)
+        h1.innerText=element.login
+        h1.setAttribute(`id`, `usere${userid}`)
+        button.setAttribute(`id`,`${btnid}`)
+        userid++
+        btnid++
+        profilePhoto.src=element.avatar_url
+        li.appendChild(profilePhoto)
+        li.appendChild(h1)
+        li.appendChild(button)
+        ulList.appendChild(li)
+        }
 
+     
+    )}
 
 async function searchForDiv(keyword) {
   return fetch( 
@@ -113,12 +93,15 @@ async function searchForDiv(keyword) {
     }
   )
   .then(res => res.json())
+  .catch(console.log(Error))
 }
 
 
 
- async function liButton(){
-    let gitname = document.getElementById(`useruser`).innerText
+ async function liButton(){  
+    let currentid=(this.id)
+    let gitname = document.getElementById(`usere${currentid}`).innerText
+    console.log(gitname)
     const data= await searchForDiv(gitname)
     console.log(data)
     document.body.removeChild(backcont)
@@ -131,11 +114,11 @@ async function searchForDiv(keyword) {
     img.append()
     userlogin.innerText=`@ ${data.login}`
     userlogin.append()
-    follower.innerText= data.followers_url.length
+    follower.innerText= data.followers
     follower.append()
-    following.innerText = data.following_url.length
+    following.innerText = data.following
     following.append()
-    repos.innerText = data.repos_url.length
+    repos.innerText = data.public_repos
     repos.append()
     let year = data.created_at.slice(0,4)
     let month = data.created_at.slice(5,7)
@@ -176,6 +159,7 @@ async function fetche(keyword) {
     }
   )
   .then(res => res.json())
+  .catch(console.log(Error))
 }
 
 // async function handleChange(e) { 
@@ -223,8 +207,10 @@ function  darkMode() {
   let darcont = document.getElementById(`darkMode`) 
   let span = document.getElementById(`darkText`)
   let icon = document.getElementById(`icon`)
+  maincont.classList.toggle(`ContLigth`)
+  
    
-  if(mode==true){
+  if(mode){
       span.innerText="DARK"
       icon.src =`./assets/Path.png`
     }else{
@@ -234,6 +220,11 @@ function  darkMode() {
     darcont.classList.toggle(`headContLight`)
     inputcont.classList.toggle(`inputcontLigth`)
     backcont.classList.toggle(`backcontLigth`)
-   
+    reposDiv.classList.toggle(`reposDivLigth`)
+    let blackElements=document.querySelectorAll(`[style*="color: black"]`)
+    
+    user.classList.toggle(`userLigth`)
+    bio.classList.toggle(`bioLigth`)
+    adress.classList.toggle(`adressLigth`)
 
 }
