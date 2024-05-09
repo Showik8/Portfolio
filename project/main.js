@@ -76,8 +76,8 @@ document.body.appendChild(footer)
 
 async function justMenu(){
     const data = await allprod()
+    console.log(data)
     data.forEach(item => {
-        console.log(item)
         const product = document.createElement(`div`)
         product.classList.add(`inde`)
         const photo = document.createElement(`img`)
@@ -96,27 +96,48 @@ async function justMenu(){
         price.innerText = ` ${item.price} USD $`
         pricedv.appendChild(price)
         pricedv.appendChild(count)
-        const buttonDiv = document.createElement(`div`)
-        buttonDiv.classList.add(`btndiv`)
-        const buy = document.createElement(`button`)
-        buy.classList.add(`buy`)
-        buy.innerText = "Buy"
-        const addbtn = document.createElement(`button`)
-        addbtn.classList.add(`add`)
-        addbtn.innerText = "Add to Cart"
+
+
+        const ratingdv = document.createElement(`div`)
+        ratingdv.classList.add(`pricedv`)
+        const rating = document.createElement(`span`)
+        rating.innerText= "Rating:"
+        ratingdv.appendChild(rating)
+        const rate = document.createElement(`span`)
+        rate.classList.add(`stars`)
+        
+        if (item.rating.rate >= 4.5 && item.rating.rate <=5) {
+           rate.innerText =`★★★★★`
+          }
+        if (item.rating.rate >= 3.5 && item.rating.rate <=4.5 ) {
+            rate.innerText =`★★★★`
+           }
+        if (item.rating.rate >= 2.5 && item.rating.rate <=3.5) {
+            rate.innerText =`★★★`
+        }
+        if (item.rating.rate >= 1.5 && item.rating.rate <=2.5) {
+            rate.innerText =`★★`
+           }
+        if (item.rating.rate >= 0 && item.rating.rate <=1.5) {
+            rate.innerText =`★`
+           }
+
+        ratingdv.appendChild(rate)
         product.appendChild(photo)
         infoDiv.appendChild(productTitle)
         infoDiv.appendChild(pricedv)
-        buttonDiv.appendChild(buy)
-        buttonDiv.appendChild(addbtn)
-        infoDiv.appendChild(buttonDiv)
+        infoDiv.appendChild(ratingdv)
         product.appendChild(infoDiv)
         cont.appendChild(product)
        
     });
-    }  
+}
+
 
 justMenu()
+
+
+
 
 
 const women = document.getElementById(`women's clothing`)
@@ -157,26 +178,53 @@ async function search(e){
         price.innerText = ` ${item.price} USD $`
         pricedv.appendChild(price)
         pricedv.appendChild(count)
-        const buttonDiv = document.createElement(`div`)
-        buttonDiv.classList.add(`btndiv`)
-        const buy = document.createElement(`button`)
-        buy.classList.add(`buy`)
-        buy.innerText = "Buy"
-        const addbtn = document.createElement(`button`)
-        addbtn.classList.add(`add`)
-        addbtn.innerText = "View"
+
+
+        const ratingdv = document.createElement(`div`)
+        ratingdv.classList.add(`pricedv`)
+        const rating = document.createElement(`span`)
+        rating.innerText= "Rating:"
+        ratingdv.appendChild(rating)
+        const rate = document.createElement(`span`)
+        rate.classList.add(`stars`)
+        
+        if (item.rating.rate >= 4.5 && item.rating.rate <=5) {
+           rate.innerText =`★★★★★`
+          }
+        if (item.rating.rate >= 3.5 && item.rating.rate <=4.5 ) {
+            rate.innerText =`★★★★`
+           }
+        if (item.rating.rate >= 2.5 && item.rating.rate <=3.5) {
+            rate.innerText =`★★★`
+        }
+        if (item.rating.rate >= 1.5 && item.rating.rate <=2.5) {
+            rate.innerText =`★★`
+           }
+        if (item.rating.rate >= 0 && item.rating.rate <=1.5) {
+            rate.innerText =`★`
+           }
+
+        ratingdv.appendChild(rate)
         product.appendChild(photo)
         infoDiv.appendChild(productTitle)
         infoDiv.appendChild(pricedv)
-        buttonDiv.appendChild(buy)
-        buttonDiv.appendChild(addbtn)
-        infoDiv.appendChild(buttonDiv)
+        infoDiv.appendChild(ratingdv)
         product.appendChild(infoDiv)
         cont.appendChild(product)
-        cont.appendChild(footer)
+       
     });
 
 
 }
 
 main.addEventListener(`click` , justMenu)
+
+let woe = document.getElementById(`woe`)
+woe.addEventListener(`mouseover`, overed)
+
+
+function overed(e){
+    const buttonDiv = document.createElement(`div`)
+   
+       
+}
