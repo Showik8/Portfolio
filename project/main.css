@@ -113,6 +113,13 @@ header{
         
     }
 
+    .imginfo{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 15px;
+        left: 200px;
+    }
 }
 
 .inf{

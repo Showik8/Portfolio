@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+body{
+    min-height: 100svh;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gainsboro;
+    border-radius: 12%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 15px ;
+}
+
+#startBtn{
+    padding: 12px 8px;
+    background-color: cornflowerblue;
+    border-radius: 14px;
+    width: 40%;
+    color: white;
+}
+
+.quizes{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(58, 69, 80);
+    
+}
+
+ul{
+    list-style: none;
+    /* background-color: aquamarine; */
+    width: 70%;
+    height: 80%;
+}
+
+li{
+    padding: 10px 10px;
+    color: white;
+    
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        button{
+            color: black;
+            padding: 12px 6px;
+            border-radius : 20px ;
+            background-color: yellowgreen;
+        }
+}
+
+.hide{
+    display: none;
+}
+
+.btnebi{
+    background-color: rgb(7, 90, 162);
+    width: 200px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.questions{
+    width: 90%;
+    height: 90%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+
+}
+
+hr{
+    width: 100%;
+}
+
+.btnsdiv{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.answers{
+    width: 100%;
+    height: 60px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 2px;
+    outline: none;
+    
+}
+
+.answers:hover{
+    background-color: rgb(30, 14, 14);
+    color: white;
+}
+
+.next{
+    padding: 10px 5px;
+    background-color: green;
+    color:  white;
+    border-radius: 2px;
+}
+
+.answcont{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    gap: 20px;
+    flex-direction:column;
+
+}
+
+.correct{
+    background-color: green;
+}
+
+.wrong{
+    background-color: red;
+    cursor:not-allowed;
+}
