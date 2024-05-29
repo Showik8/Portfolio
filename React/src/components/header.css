@@ -1,0 +1,24 @@
+
+.head{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    
+}
+
+.HeaderLogo{
+    width: 200px;
+    height: 38px;
+}
+
+
+.btn{
+   padding: 8px 16px;
+   border-radius: 30px;
+   background-color: rgba(255, 82, 193, 1);
+   color: white;
+   border: 1px solid rgba(255, 82, 193, 1);
+   font-size: 18px;
+
+}

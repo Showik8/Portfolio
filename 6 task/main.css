@@ -127,13 +127,14 @@ h1{
 }
 
 .content{
-    height: 440px;
+    height: 40%;
     display: flex;
     gap: 40px;
 }
 
 .card{
     /* width: 290px; */
+    /* height: 80%; */
     display: flex;
     border: 4px solid white;
     padding: 46px 33px 25px 33px;

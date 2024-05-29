@@ -1,0 +1,38 @@
+.box{
+    width: 252px;
+    height: 222px;
+}
+
+.SecondContent{
+    width: 70%;
+    height: 222px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+h2{
+    color: rgba(0, 37, 46, 1);
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 144px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+
+.icon{
+    width: 56px;
+    height: 56px;
+}
+
+.Secondp{
+    color: rgba(128, 142, 154, 0.8);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+
+}

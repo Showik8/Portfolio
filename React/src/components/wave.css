@@ -1,0 +1,49 @@
+.WaveContent{
+    background-image: url(./asset/Path.png);
+    background-color: white;
+    width: 100%;
+    height: 841.16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    padding: 0px 10px 0px 100px; 
+    background-size: cover;
+
+}
+
+.people{
+    max-width: 720px;
+    height: 560px;
+}
+
+.textc{
+    width: 520px;
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+   
+  
+}
+h3{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(0, 37, 46, 1);
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.Thirdp{
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(0, 37, 46, 1);
+    text-wrap: wrap;
+}
