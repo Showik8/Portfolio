@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  max-width: 99vw;
+  min-height: 99svh;
+  padding: 12px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(13, 25, 44, 1);
+}
+
+@media (max-width:800px) {
+  #root{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+
+
