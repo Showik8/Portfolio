@@ -5,7 +5,7 @@
     flex-direction: column;
     text-align: start;
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     padding: 30px 20px;
 
     span{
