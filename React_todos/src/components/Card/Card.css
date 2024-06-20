@@ -1,0 +1,20 @@
+.card {
+  border-radius: 24px;
+  border: 2px solid white;
+  &.large {
+    width: 800px;
+    height: 700px;
+    padding: 32px;
+  }
+  &.medium {
+    width: 350px;
+    height: 250px;
+    padding: 24px;
+  }
+  &.small {
+    border-radius: 16px;
+    width: 300px;
+    height: 50px;
+    padding: 12px;
+  }
+}

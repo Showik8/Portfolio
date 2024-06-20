@@ -1,0 +1,15 @@
+.todoActions {
+    min-width: 60px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      padding: 4px 8px;
+      cursor: pointer;
+      color: white;
+      background-color: blueviolet;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+  }
+

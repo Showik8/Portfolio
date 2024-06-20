@@ -1,0 +1,31 @@
+.btn {
+  border-radius: 50%;
+  background-color: orangered;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.large {
+    width: 120px;
+    height: 120px;
+    font-size: 36px;
+  }
+  &.medium {
+    width: 80px;
+    height: 80px;
+    font-size: 26px;
+  }
+  &.small {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  span{
+    font-size: 30px;
+  }
+}

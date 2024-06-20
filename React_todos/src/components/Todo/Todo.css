@@ -1,0 +1,27 @@
+.todoCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .check {
+    display: flex;
+    align-items: center;
+    input {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+      &.checked {
+        text-decoration: line-through solid red;
+      }
+     
+    }
+  }
+
+}
