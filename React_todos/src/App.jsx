@@ -14,8 +14,8 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [Edit, setEditing] = useState(false)
   const [cur, SetCur] = useState (0)
-  const [total, setTotal] = useState(todos.length)
-  let result = todos.length
+  // const [total, setTotal] = useState(todos.length)
+  // let result = todos.length
 
 
   const handleChange = (e) => {
@@ -42,7 +42,7 @@ function App() {
 
   const totalTodos = useMemo(()=>{
     return todos.length
-  })
+  },[todos])
 
 
   const completedTodos = useMemo(() => {
@@ -58,14 +58,7 @@ function App() {
    
 
   const DeleteBtn=(idx)=>{
-    let todoebi = [...todos]
-    let Newtodos = []
-    for(let i = 0; todoebi.length>i; i++){
-    if(i!==idx){
-      Newtodos.push(todoebi[i])}
-    }
-    setTodos(Newtodos)
-   
+    setTodos((prev)=>prev.filter((todo,currIdx)=>idx!==currIdx))
   }
 
   const SaveValue=()=>{
