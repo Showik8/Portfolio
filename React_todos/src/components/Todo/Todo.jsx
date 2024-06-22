@@ -1,14 +1,20 @@
 import { CardSizes } from "../../constants/card";
-import { Actions } from "../Actions";
 import { Card } from "../Card";
+import { DeleteSVG } from "../Icons/DeleteIcon";
+import { EditIcon } from "../Icons/EditIcon";
 
 import "./Todo.css";
 
 export const Todo = (props) => {
-  const { todo, handlToggleTodo = () => {},EditBtn = ()=>{},DeleteBtn=()=>{} ,idx, } = props;
+  const {
+    todo,
+    handlToggleTodo = () => {},
+    onEditTodo = () => {},
+    onDeleteTodo = () => {},
+    idx,
+  } = props;
 
-  
-
+  onDeleteTodo;
 
   return (
     <Card classNames="todoCard" size={CardSizes.SMALL}>
@@ -21,8 +27,12 @@ export const Todo = (props) => {
         <span className={todo.done ? "checked" : ""}>{todo.value}</span>
       </div>
       <div className="todoActions">
-        <button onClick={()=> EditBtn(idx)}>E</button>
-        <button onClick={()=>DeleteBtn(idx)} >D</button>
+        <button onClick={() => onEditTodo(idx)}>
+          <EditIcon />
+        </button>
+        <button onClick={() => onDeleteTodo(idx)}>
+          <DeleteSVG />
+        </button>
       </div>
     </Card>
   );

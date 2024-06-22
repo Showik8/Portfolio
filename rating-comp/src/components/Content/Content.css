@@ -1,0 +1,40 @@
+.actions {
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  align-self: start;
+  justify-self: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h2 {
+  color: white;
+  font-family: Overpass;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35.45px;
+  text-align: left;
+}
+
+p {
+  color: rgba(150, 159, 173, 1);
+}
+
+.primary {
+  background-color: rgba(252, 118, 20, 1);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-family: Overpass;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18.99px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.primary:hover {
+  background-color: white;
+  color: orange;
+}

@@ -1,0 +1,41 @@
+.btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(38, 46, 56, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(150, 159, 173, 1);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(124, 135, 152, 1);
+  color: white;
+}
+
+.btn:disabled {
+  background-color: rgba(38, 46, 56, 1);
+  cursor: no-drop;
+  color: rgba(150, 159, 173, 1);
+}
+
+.active {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(252, 118, 20, 1);
+  color: white;
+  svg {
+    path {
+      fill: white;
+    }
+  }
+}
