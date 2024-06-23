@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="./main.css">
+    <title>Weather</title>
+</head>
+<body>
+    <header>
+        <img class="headerIcon" src="./assets/logo.png" alt="Logo">
+        <div class="searchInputsmall">
+            <input id="inpt" class="" type="text" placeholder="Search Location....">
+            <img  class="smallIcon" onclick="submitButtonForheader()" src="./assets/Vector.png" alt="button">
+        </div>
+    </header>
+    <img class="icon" src="./assets/logo.png" alt="Logo">  
+    <div id="tempinfo" class="hidden">
+        </div> 
+    </div>
+  <div class="blured">
+    <div class="weatherForecast">
+        <div class="searchInput"> 
+            <input id="searchinput" type="text" placeholder="Search Location....">
+            <img onclick="submitButton()" src="./assets/Vector.png" alt="bttn">
+        </div>
+        <span class="weaterDetail">Weather Details...</span>
+        <div class="info"> 
+            <h5>THUNDERSTORM WITH LIGTH DRIZZLE</h5>
+            <div class="smallInfo">
+                <p>Temp max</p>
+               <div class="tempNum">
+                <p id="Temp max"></p>
+                <img src="./assets/MaxLogo.png">
+               </div>
+            </div>
+            <div class="smallInfo">
+                <p>Temp min</p>
+               <div class="tempNum">
+                <p id="Temp min"></p>
+                <img src="./assets/minLogo.png">
+               </div>
+            </div>
+            <div class="smallInfo">
+                <p>Humadity</p>
+               <div class="tempNum">
+                <p id="humidity"></p>
+                <img src="./assets/outline.png">
+               </div>
+            </div>
+            <div class="smallInfo">
+                <p>Cloudy</p>
+               <div class="tempNum">
+                <p id="cloudy"></p>
+                <img src="./assets/cloudy.png">
+               </div>
+            </div>
+            <div class="smallInfo">
+                <p >Wind</p>
+               <div class="tempNum">
+                <p id="wind"></p>
+                <img src="./assets/wind.png">
+               </div>
+            </div>
+        </div>
+        <div id="interval"class="interval"></div>
+        <span class="today">Today's Weather Forecast...</span>
+        <div  id="forTime" class="forTime">
+        </div>
+    </div>
+  </div>
+    
+</body>
+<script src="./index.js"></script>
+</html>

@@ -20,11 +20,11 @@ export const Todo = (props) => {
     <Card classNames="todoCard" size={CardSizes.SMALL}>
       <div className="check">
         <input
-          value={todo.done}
+          checked={todo.completed}
           onChange={() => handlToggleTodo(idx)}
           type="checkbox"
         />
-        <span className={todo.done ? "checked" : ""}>{todo.value}</span>
+        <span className={todo.done ? "checked" : ""}>{todo.todo}</span>
       </div>
       <div className="todoActions">
         <button onClick={() => onEditTodo(idx)}>

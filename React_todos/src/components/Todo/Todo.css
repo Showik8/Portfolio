@@ -1,8 +1,14 @@
+.todos{
+  overflow-y:scroll ;
+
+}
+
 .todoCard {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  min-height: 50px;
+  height: unset !important;
   .todoActions {
     button {
       background: none;

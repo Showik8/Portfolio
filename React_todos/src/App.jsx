@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { Card } from "./components/Card";
 import { CardSizes } from "./constants/card";
@@ -10,17 +10,19 @@ import { Result } from "./components/Result";
 import "./App.css";
 
 function App() {
+  const PAGE_SIZE =10
+
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [currIdx, setCurrIdx] = useState(null);
-
+  const [skip ,setSkip] = useState(0)
   const handleChange = (e) => {
     setInputValue(e.target.value);
   };
 
   const handleEditTodo = () => {
     const newTodos = [...todos];
-    newTodos[currIdx].value = inputValue;
+    newTodos[currIdx].todo = inputValue;
     setTodos(newTodos);
     setInputValue("");
     setCurrIdx(null);
@@ -28,8 +30,8 @@ function App() {
 
   const handleAddTodo = () => {
     const newTodo = {
-      value: inputValue,
-      done: false,
+      todo: inputValue,
+      completed: false,
     };
     setTodos((prev) => [...prev, newTodo]);
     setInputValue("");
@@ -44,7 +46,7 @@ function App() {
   const handlToggleTodo = (idx) => {
     setTodos((prev) =>
       prev.map((todo, currIdx) =>
-        idx === currIdx ? { ...todo, done: !todo.done } : todo
+        idx === currIdx ? { ...todo, completed: !todo.completed } : todo
       )
     );
   };
@@ -54,17 +56,28 @@ function App() {
   }, [todos]);
 
   const completedTodos = useMemo(() => {
-    return todos.filter((todo) => todo.done).length;
+    return todos.filter((todo) => todo.completed).length;
   }, [todos]);
 
   const onEditTodo = (idx) => {
-    setInputValue(todos[idx].value);
+    setInputValue(todos[idx].todo);
     setCurrIdx(idx);
   };
 
   const onDeleteTodo = (idx) => {
     setTodos((prev) => prev.filter((todo, currIdx) => idx !== currIdx));
   };
+
+const fetchTodos= async()=>{
+ const response = await fetch(`https://dummyjson.com/todos?limit=${PAGE_SIZE}&skip=${skip}`)
+ const data = await response.json() 
+ console.log(data.todos)
+ setTodos(data.todos)
+}
+
+useEffect(()=>{
+  fetchTodos()
+},[])
 
   return (
     <Card classNames="parentCard" size={CardSizes.LARGE}>
