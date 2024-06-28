@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    height: 100svh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 40, 12, 0.411);
+}
+
+.main{
+    width: 40%;
+    height: 60%;
+    border: 1 solid dotted;
+    border-radius: 2rem;
+    background-color: cadetblue;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.jokes{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    /* overflow-y: scroll; */
+}
+
+.btnCont{
+    width: 70%;
+    height: 50px;
+    border: 1px dotted gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#nextJk{
+    padding: 8px 12px;
+    color: white ;
+    background-color: greenyellow;
+    border-radius: 1rem;
+}
+
+#removeJk{
+    padding: 8px 12px;
+    background-color: royalblue;
+    border-radius: 1rem;
+    color: white;
+}
