@@ -1,0 +1,49 @@
+.Searchbar {
+  display: flex;
+  width: 800px;
+  height: 70px;
+  background-color: rgba(30, 42, 71, 1);
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+}
+
+.Searchbar.Light {
+  background-color: rgba(255, 255, 255, 0.748);
+  color: black;
+}
+
+button {
+  width: 106px;
+  height: 50px;
+  background-color: rgb(56, 117, 187);
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.7px;
+  color: white;
+}
+
+p {
+  color: red;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22.22px;
+  text-align: left;
+}
+
+input {
+  width: 300px;
+  fill: none;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
