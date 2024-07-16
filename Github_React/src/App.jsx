@@ -66,6 +66,7 @@ function App() {
       setSearch(true);
       setLoading(true);
       setIsError(false);
+      setData("");
     }
   };
 
@@ -84,7 +85,16 @@ function App() {
         onclick={onsubmit}
         value={setInputValue}
       />
-      {data && <HomePage data={data} mode={darkMode} loading={loading} />}
+
+      {data && (
+        <HomePage
+          click={setData}
+          data={data}
+          mode={darkMode}
+          loading={loading}
+          load={setLoading}
+        />
+      )}
     </>
   );
 }

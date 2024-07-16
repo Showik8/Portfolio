@@ -1,0 +1,95 @@
+.User {
+  padding: 50px 80px;
+  display: flex;
+  gap: 80px;
+  width: 800px;
+  height: 400px;
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.Details {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color:white;
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.username {
+  display: flex;
+  justify-content: space-between;
+
+  p{
+    color: blue;
+  }
+}
+
+.Follow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(20, 29, 47, 1);
+    color: white;
+
+    div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.adress{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 80px;
+
+    a{
+        display: flex;
+        height: 40px;
+        gap: 20px;
+        flex-wrap: wrap ;
+    }
+    
+}
+
+@media screen and (max-width:900px){
+
+  .User{
+    padding: 0px 15px;
+    max-width: 600px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px
+
+  }
+
+  .username{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  span{
+        display: flex;
+        justify-content:  center;
+      }
+  
+}
