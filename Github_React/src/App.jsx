@@ -6,9 +6,9 @@ import axios from "axios";
 import { LigthMode } from "./components/LigthMode/LigthMode";
 
 import "./App.css";
+import useFetch from "./useFetch";
 
 function App() {
-  const abortControlerRef = useRef(null);
 
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("mode"))
@@ -16,57 +16,18 @@ function App() {
       : false
   );
   const [inputValue, setInputValue] = useState(``);
-  const [data, setData] = useState();
-  const [search, setSearch] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-
-  useEffect(() => {
-    if (search) {
-      const fetchdata = async (username) => {
-        abortControlerRef.current = new AbortController();
-        const URL = `https://api.github.com/search/users?q=` + username;
-        try {
-          const response = await axios.get(URL, {
-            params: { username },
-            signal: abortControlerRef.current?.signal,
-            headers: {
-              Accept: "application/vnd.github+json",
-              Authorization: "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",
-              "X-GitHub-Api-Version": "2022-11-28",
-            },
-          });
-
-          setData(response.data.items);
-          setLoading(true);
-        } catch (error) {
-          if (axios.isCancel(error)) {
-            console.log("Request canceled:", error.message);
-          } else {
-            setIsError(true);
-            console.error("Error fetching data:", error);
-          }
-        } finally {
-          abortControlerRef.current = null;
-          setLoading(false);
-        }
-      };
-      fetchdata(inputValue);
-
-      return () => {
-        abortControlerRef.current?.abort();
-        setSearch(false);
-      };
-    }
-  }),
-    [search];
-
+  // const [data, setData] = useState();
+  // const [search, setSearch] = useState(false);
+  // const [loading, setLoading] = useState(false);
+  // const [isError, setIsError] = useState(false);
+  
+  const URL = `https://api.github.com/search/users?q=Showik`;
+  const {data , loading, isError}= useFetch(URL) 
+  
+  
   const onsubmit = () => {
     if (inputValue.length > 3) {
-      setSearch(true);
-      setLoading(true);
-      setIsError(false);
-      setData("");
+
     }
   };
 
@@ -88,11 +49,8 @@ function App() {
 
       {data && (
         <HomePage
-          click={setData}
-          data={data}
           mode={darkMode}
           loading={loading}
-          load={setLoading}
         />
       )}
     </>
